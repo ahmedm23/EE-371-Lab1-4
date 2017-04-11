@@ -3,8 +3,8 @@
 	//b. Use the D flip-flop model in the adjacent listing.
 module synchrocounter (in, clk, reset, count);
 	input clk, reset;
-	input in [3:0];
-	output reg [3:0];
+	input [3:0] in;
+	output reg [3:0] count;
 	
 	assign count[0] = (in[0])^(in[1]);
 	assign count[1] = (in[1])^(in[2]);

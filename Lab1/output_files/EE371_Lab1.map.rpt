@@ -1,5 +1,5 @@
-Analysis & Elaboration report for EE371_Lab1
-Wed Apr 05 15:32:26 2017
+Analysis & Synthesis report for EE371_Lab1
+Tue Apr 11 14:50:30 2017
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
 
 
 
@@ -34,42 +34,26 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                  ;
-+-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Apr 05 15:32:26 2017           ;
-; Quartus Prime Version         ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
-; Revision Name                 ; EE371_Lab1                                      ;
-; Top-level Entity Name         ; rippleCounter                                   ;
-; Family                        ; Cyclone V                                       ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
-; Total registers               ; N/A until Partition Merge                       ;
-; Total pins                    ; N/A until Partition Merge                       ;
-; Total virtual pins            ; N/A until Partition Merge                       ;
-; Total block memory bits       ; N/A until Partition Merge                       ;
-; Total PLLs                    ; N/A until Partition Merge                       ;
-; Total DLLs                    ; N/A until Partition Merge                       ;
-+-------------------------------+-------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Apr 11 14:50:30 2017               ;
+; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name               ; EE371_Lab1                                      ;
+; Top-level Entity Name       ; rippleCounter                                   ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,28 +140,53 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Wed Apr 05 15:31:50 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EE371_Lab1 -c EE371_Lab1 --analysis_and_elaboration
+    Info: Processing started: Tue Apr 11 14:49:45 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EE371_Lab1 -c EE371_Lab1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file de1_soc.v
-    Info (12023): Found entity 1: DE1_SoC File: C:/Users/radleigh/Documents/EE371/Lab 1/DE1_SoC.v Line: 1
-    Info (12023): Found entity 2: clock_divider File: C:/Users/radleigh/Documents/EE371/Lab 1/DE1_SoC.v Line: 40
+Info (12021): Found 3 design units, including 3 entities, in source file de1_soc.v
+    Info (12023): Found entity 1: DE1_SoC File: U:/EE-371-Lab1-4/Lab1/DE1_SoC.v Line: 1
+    Info (12023): Found entity 2: clock_divider File: U:/EE-371-Lab1-4/Lab1/DE1_SoC.v Line: 23
+    Info (12023): Found entity 3: counterTestBench File: U:/EE-371-Lab1-4/Lab1/DE1_SoC.v Line: 33
 Info (12021): Found 2 design units, including 2 entities, in source file ripplecounter.v
-    Info (12023): Found entity 1: rippleCounter File: C:/Users/radleigh/Documents/EE371/Lab 1/rippleCounter.v Line: 4
-    Info (12023): Found entity 2: DFlipFlop File: C:/Users/radleigh/Documents/EE371/Lab 1/rippleCounter.v Line: 16
-Info (12127): Elaborating entity "rippleCounter" for the top level hierarchy
-Info (12128): Elaborating entity "DFlipFlop" for hierarchy "DFlipFlop:bit0" File: C:/Users/radleigh/Documents/EE371/Lab 1/rippleCounter.v Line: 9
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 841 megabytes
-    Info: Processing ended: Wed Apr 05 15:32:26 2017
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:53
+    Info (12023): Found entity 1: rippleCounter File: U:/EE-371-Lab1-4/Lab1/rippleCounter.v Line: 4
+    Info (12023): Found entity 2: DFlipFlop File: U:/EE-371-Lab1-4/Lab1/rippleCounter.v Line: 16
+Error (10170): Verilog HDL syntax error at syncrocounter.v(7) near text: ";";  expecting an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: U:/EE-371-Lab1-4/Lab1/syncrocounter.v Line: 7
+Error (10112): Ignored design unit "synchrocounter" at syncrocounter.v(4) due to previous errors File: U:/EE-371-Lab1-4/Lab1/syncrocounter.v Line: 4
+Info (12021): Found 0 design units, including 0 entities, in source file syncrocounter.v
+Info (12021): Found 1 design units, including 1 entities, in source file johnsoncounter.v
+    Info (12023): Found entity 1: johnson File: U:/EE-371-Lab1-4/Lab1/johnsonCounter.v Line: 1
+Error (10228): Verilog HDL error at DFlipFlop.v(1): module "DFlipFlop" cannot be declared more than once File: U:/EE-371-Lab1-4/Lab1/DFlipFlop.v Line: 1
+Info (10499): HDL info at rippleCounter.v(16): see declaration for object "DFlipFlop" File: U:/EE-371-Lab1-4/Lab1/rippleCounter.v Line: 16
+Info (12021): Found 0 design units, including 0 entities, in source file dflipflop.v
+Info (12021): Found 1 design units, including 1 entities, in source file schementrycounter.bdf
+    Info (12023): Found entity 1: SchemEntryCounter
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 834 megabytes
+    Error: Processing ended: Tue Apr 11 14:50:30 2017
+    Error: Elapsed time: 00:00:45
+    Error: Total CPU time (on all processors): 00:01:10
 
 

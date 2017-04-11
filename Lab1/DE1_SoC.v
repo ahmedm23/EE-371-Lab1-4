@@ -31,11 +31,11 @@ module clock_divider (clock, divided_clocks);
 endmodule
 
 module counterTestBench;
-	wire[3:0] rippleCount, syncroCount, johnsonCount;
+	wire[3:0] rippleCount, johnsonCount;
 	reg clk, reset;
 	
 	rippleCounter rCounter (clk, reset, rippleCount);
-	syncroCounter synCounter (clk, reset, syncroCount);
+	//syncroCounter synCounter (clk, reset, syncroCount);
 	johnsonCounter jCounter (clk, reset, johnsonCount);
 	
 	
