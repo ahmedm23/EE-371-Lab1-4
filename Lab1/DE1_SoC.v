@@ -1,3 +1,5 @@
+`include "rippleCounter.v"
+
 module DE1_SoC (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR,
 SW); 
 	input 		 CLOCK_50; // 50MHz clock.
@@ -36,8 +38,24 @@ module counterTestBench;
 	
 	rippleCounter rCounter (clk, reset, rippleCount);
 	//syncroCounter synCounter (clk, reset, syncroCount);
-	johnsonCounter jCounter (clk, reset, johnsonCount);
+	//johnsonCounter jCounter (clk, reset, johnsonCount);
 	
+	
+	initial begin
+		$dumpfile("counterTesterLog.vcd");
+		$dumpvars;
+	end
+endmodule
+	
+module Tester(rippleCount, johnsonCount, clk, reset);
+	input [3:0] rippleCount, johnsonCount;
+	output reg clk, reset;
+	initial // Response
+
+	begin
+		$display("\t\t clk \t reset \t rippleCount \t johnsonCount \t Time ");
+		$monitor("\t\t %b\t %b\t %b \t %b", clk, reset, rippleCount, johnsonCount, $time);
+	end
 	
 	parameter CLOCK = 100;
 	
@@ -45,20 +63,16 @@ module counterTestBench;
 		clk <= 0;
 		forever #(CLOCK/2) clk <= ~clk;
 	end
-	
-	initial begin
-		$dumpfile("counterTesterLog.vcd");
-		$dumpvars;
-	end
-	
+
 	initial begin @(posedge clk)
 		reset <= 0; @(posedge clk)@(posedge clk)
 		reset <= 1; @(posedge clk)@(posedge clk)
 		repeat(30)@(posedge clk);
 		$stop;
 	end
-endmodule
 	
+
+endmodule
 	
 	
 	

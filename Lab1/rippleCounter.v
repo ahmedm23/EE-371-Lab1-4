@@ -1,3 +1,4 @@
+`include "DFlipFlop.v"
 // A four stage (4 bit) ripple up (asynchronous) counter, with active low reset.
 //a. Design the counter using a gate or structural model.
 //b. Use the D flip-flop model in the adjacent listing.
