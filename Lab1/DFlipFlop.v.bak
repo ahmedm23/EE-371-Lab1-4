@@ -1,4 +1,4 @@
-module DFlipFlop(clk, reset, D, q, qBar);
+module DFlipFlop(q, qBar, D, clk, reset);
 	input D, clk, reset;
 	output q, qBar;
 	reg q;

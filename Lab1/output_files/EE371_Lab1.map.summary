@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Tue Apr 11 14:50:30 2017
+Analysis & Elaboration Status : Successful - Tue Apr 11 17:03:19 2017
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : EE371_Lab1
-Top-level Entity Name : rippleCounter
+Top-level Entity Name : DE1_SoC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
