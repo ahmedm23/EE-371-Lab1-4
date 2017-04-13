@@ -64,15 +64,6 @@ agreement for further details.
 	)
 )
 (connector
-	(pt 688 248)
-	(pt 688 184)
-)
-(connector
 	(pt 504 248)
 	(pt 512 248)
 )
-(connector
-	(pt 512 248)
-	(pt 688 248)
-)
-(junction (pt 512 248))
