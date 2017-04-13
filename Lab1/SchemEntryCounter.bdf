@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect 624 672 792 688)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 30 14)(font "Arial" ))
+	(text "clk" (rect 5 0 29 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ agreement for further details.
 	(input)
 	(rect 624 712 792 728)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 47 14)(font "Arial" ))
+	(text "reset" (rect 5 0 46 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -610,20 +610,8 @@ agreement for further details.
 	(pt 1008 576)
 )
 (connector
-	(pt 1088 408)
-	(pt 1080 408)
-)
-(connector
-	(pt 1080 408)
-	(pt 1008 408)
-)
-(connector
 	(pt 672 416)
 	(pt 664 416)
-)
-(connector
-	(pt 664 416)
-	(pt 664 528)
 )
 (connector
 	(pt 1088 248)
@@ -632,10 +620,6 @@ agreement for further details.
 (connector
 	(pt 1080 248)
 	(pt 1008 248)
-)
-(connector
-	(pt 672 256)
-	(pt 664 256)
 )
 (connector
 	(pt 1088 80)
@@ -657,16 +641,6 @@ agreement for further details.
 (connector
 	(pt 1072 768)
 	(pt 504 768)
-	(color 255 0 0)
-)
-(connector
-	(pt 1080 408)
-	(pt 1080 528)
-	(color 255 0 0)
-)
-(connector
-	(pt 1080 528)
-	(pt 664 528)
 	(color 255 0 0)
 )
 (connector
@@ -709,6 +683,47 @@ agreement for further details.
 	(pt 504 768)
 	(color 255 0 0)
 )
+(connector
+	(pt 664 416)
+	(pt 664 496)
+)
+(connector
+	(pt 1080 408)
+	(pt 1080 496)
+	(color 255 0 0)
+)
+(connector
+	(pt 1008 408)
+	(pt 1080 408)
+)
+(connector
+	(pt 1080 408)
+	(pt 1088 408)
+)
+(connector
+	(pt 496 504)
+	(pt 496 496)
+)
+(connector
+	(pt 496 496)
+	(pt 664 496)
+)
+(connector
+	(pt 664 496)
+	(pt 1080 496)
+)
+(connector
+	(pt 504 296)
+	(pt 504 256)
+)
+(connector
+	(pt 504 256)
+	(pt 664 256)
+)
+(connector
+	(pt 664 256)
+	(pt 672 256)
+)
 (junction (pt 832 280))
 (junction (pt 800 264))
 (junction (pt 520 240))
@@ -722,3 +737,5 @@ agreement for further details.
 (junction (pt 1080 248))
 (junction (pt 1080 80))
 (junction (pt 520 80))
+(junction (pt 664 496))
+(junction (pt 664 256))
