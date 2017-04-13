@@ -9,8 +9,8 @@ module rippleCounter(clk, reset, count);
    wire   [3:0] countbar;
 	
    DFlipFlop bit0(.clk(clk), .reset(reset), .D(countbar[0]), .q(count[0]), .qBar(countbar[0]));
-   DFlipFlop bit1(.clk(count[0]), .reset(reset), .D(countbar[1]), .q(count[1]), .qBar(countbar[1]));
-   DFlipFlop bit2(.clk(count[1]), .reset(reset), .D(countbar[2]), .q(count[2]), .qBar(countbar[2]));
-   DFlipFlop bit3(.clk(count[2]), .reset(reset), .D(countbar[3]), .q(count[3]), .qBar(countbar[3]));
+   DFlipFlop bit1(.clk(countbar[0]), .reset(reset), .D(countbar[1]), .q(count[1]), .qBar(countbar[1]));
+   DFlipFlop bit2(.clk(countbar[1]), .reset(reset), .D(countbar[2]), .q(count[2]), .qBar(countbar[2]));
+   DFlipFlop bit3(.clk(countbar[2]), .reset(reset), .D(countbar[3]), .q(count[3]), .qBar(countbar[3]));
 
 endmodule
