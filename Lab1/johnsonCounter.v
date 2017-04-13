@@ -1,9 +1,9 @@
 module johnsonCounter(clk, reset, count);
    input clk, reset;
    output reg [3:0] count;
-	
+
    integer ps, ns;
-	
+
    always
       case (ps)
          0: begin
@@ -39,7 +39,7 @@ module johnsonCounter(clk, reset, count);
                count = 4'b0001;
             end
       endcase
-	
+
    always @ (posedge clk)
       if (~reset)
          ps <= 0;
